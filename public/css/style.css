@@ -1,0 +1,109 @@
+:root{
+    --primary: #2E3192;
+    --white :#FFFFFF;
+    --neutral: rgba(232, 232, 232, 0.538);
+    --banana: #F0E629;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header */
+header{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+header #ucc-logo{
+    height: 70px;
+}
+nav{
+    position: relative;
+}
+
+#login-button{
+    padding: 8px 24px;
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+
+/* hero section */
+#heroleft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#heroleft h1{
+    font-size: 3.8rem;
+    font-weight: bolder;
+    color: var(--primary);
+}
+#heroleft p{
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+#heroleft button{
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 8px 32px;
+}
+#hero-image{
+    height: 600px;
+}
+
+/* requirements section */
+#req-section{
+    background-color: var(--neutral);
+}
+.req-heading h2{
+    color: var(--primary);
+    text-align: center;
+}
+.req-heading hr{
+    color: var(--banana);
+    height: 3px;
+    width: 30%;
+    transform: translateX(60%);
+}
+
+#req-image{
+    height: 250px;
+}
+
+
+/* how to apply */
+#apply-section .step-tile{
+width: 30%;
+padding: 60px;
+border-radius: 16px;
+margin-top: 60px;
+}
+.step-tile img{
+height: 90px;
+}
+.step-tile div{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.step-tile h4{
+    font-weight: bolder;
+}
+.step-tile p{
+    opacity: 0.8;
+}
+
+.step1{
+    background-color: var(--banana);
+}
+
+.step2{
+    background-color: var(--primary);
+    color: white;
+}
+.step3{
+    background-color: #8FB8F6;
+}
