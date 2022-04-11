@@ -112,5 +112,10 @@ height: 90px;
     width: 300px;
 } */
 .testimony{
-    background-color: red;
+    width: 500px;
+    background-color: var(--white);
+}
+.testimony h4{
+    font-weight: bolder;
+    color: var(--primary);
 }
