@@ -101,6 +101,66 @@ include_once 'view/layouts/navbar.php';
             
     </div>
 
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active d-flex" data-bs-interval="10000">
+      <img src="./public/images/user2.jpg" class="carousel-image w-50" alt="first student">
+    <div class="testimony ms-2">
+        <h4>Ike Gaiden</h4>
+        <span>2020/2021 @E-Learning & Knowledge Commons</span>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+             Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+            Ut enim ad minima veniam,
+        </p>
+    </div>
+    </div>
+
+    <div class="carousel-item d-flex" data-bs-interval="2000">
+      <img src="./public/images/user3.jpg" class="carousel-image w-50" alt="second student">
+      <div class="testimony ms-2">
+        <h4>Lamisi Moro</h4>
+        <span>2020/2021 @E-Learning & Knowledge Commons</span>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+             Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+            Ut enim ad minima veniam,
+        </p>
+    </div>
+    </div>
+
+    <div class="carousel-item d-flex">
+      <img src="./public/images/user2.jpg" class="carousel-image w-50" alt="third student">
+      <div class="testimony ms-2">
+        <h4>George Anku</h4>
+        <span>2020/2021 @E-Learning & Knowledge Commons</span>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+             Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+            Ut enim ad minima veniam,
+        </p>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
   </section>
 
 
