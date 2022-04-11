@@ -14,7 +14,7 @@ include_once 'view/layouts/navbar.php';
        </div>
 
   
-       <img src="./public/images/excited.png" alt="students in class" id="hero-image"> 
+       <img src="./public/images/excited.jpg" alt="students in class" id="hero-image"> 
    
   </section>
   <!-- hero section end -->
@@ -104,7 +104,7 @@ include_once 'view/layouts/navbar.php';
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active d-flex" data-bs-interval="10000">
-      <img src="./public/images/user2.jpg" class="carousel-image w-50" alt="first student">
+      <img src="./public/images/user1.jpg" class="carousel-image w-50" alt="first student">
     <div class="testimony ms-2">
         <h4>Ike Gaiden</h4>
         <span>2020/2021 @E-Learning & Knowledge Commons</span>
@@ -120,7 +120,7 @@ include_once 'view/layouts/navbar.php';
     </div>
 
     <div class="carousel-item d-flex" data-bs-interval="2000">
-      <img src="./public/images/user3.jpg" class="carousel-image w-50" alt="second student">
+      <img src="./public/images/user2.jpg" class="carousel-image w-50" alt="second student">
       <div class="testimony ms-2">
         <h4>Lamisi Moro</h4>
         <span>2020/2021 @E-Learning & Knowledge Commons</span>
@@ -136,7 +136,7 @@ include_once 'view/layouts/navbar.php';
     </div>
 
     <div class="carousel-item d-flex">
-      <img src="./public/images/user2.jpg" class="carousel-image w-50" alt="third student">
+      <img src="./public/images/user3.jpg" class="carousel-image w-50" alt="third student">
       <div class="testimony ms-2">
         <h4>George Anku</h4>
         <span>2020/2021 @E-Learning & Knowledge Commons</span>
