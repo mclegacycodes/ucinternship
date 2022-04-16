@@ -142,3 +142,29 @@ footer #ucc-footer-logo{
 footer a{
     color: var(--white);
 }
+footer a{
+    margin-bottom: 8px;
+}
+
+
+
+/* form styling */
+.form-card{
+    width: 70%;
+   overflow: hidden;
+ 
+
+}
+.main-form h2{
+    text-align: center;
+    margin: 20px 0px;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.main-form button{
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 8px 32px;
+    width: 100%;
+}
