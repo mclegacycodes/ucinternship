@@ -1,4 +1,5 @@
 <?php 
+require_once 'app/controller/userController.php';
 include_once 'view/layouts/navbar.php';
 ?>
 
@@ -8,23 +9,26 @@ include_once 'view/layouts/navbar.php';
     
     <div class="main-form w-50 mx-auto ">
     <h2>LOGIN</h2>
-    <form>
+
+    <?php if(!empty($errorMessage)){echo $errorMessage; } ?>
+
+    <form action="" method="POST">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Student Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" required>
             
         </div>
 
         <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <input type="password" class="form-control" id="pass" name="pass">
         </div>
         
         <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember">
             <label class="form-check-label" for="exampleCheck1">Remember me</label>
         </div>
-        <button type="submit" class="btn btn-block">Submit</button>
+        <button type="submit" class="btn btn-block" name="loginbtn">Submit</button>
     </form>
     </div>
 
