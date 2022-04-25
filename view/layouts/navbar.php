@@ -42,7 +42,7 @@
                     <a class="nav-link" href="#">DEPARTMENTS</a>
                     <a class="nav-link" href="#">FAQs</a>
                     <a class="nav-link" href="#">REVIEWS</a>
-                    <a class="nav-link" href="#"><button class="btn" type="button" id="login-button">LOGIN</button></a>
+                    <a class="nav-link" href="login.php"><button class="btn" type="button" id="login-button">LOGIN</button></a>
                     
                 </div>
             </div>
