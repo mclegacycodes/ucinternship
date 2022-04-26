@@ -17,18 +17,19 @@ class User extends Database{
     //user login
     public function login($email,$pass){
         if($this->userExists($email)){
-             $stmt = $this->db->query("SELECT * FROM stud_db WHERE email = '{$email}'");
+             $stmt = $this->db->query("SELECT * FROM users WHERE email = '{$email}'");
              if(mysqli_num_rows($stmt)){
                  $result = mysqli_fetch_assoc($stmt);
 
-                 Utils::passwordVerify($pass,$result['pass']) ? header('Location: view/layouts/dashboard.php') : $this->msg=['danger','Invalid username or password'];
-                 print_r($result);
+                 Utils::passwordVerify($pass,$result['pass']) ? header('Location: dashboard.php') : $this->msg=['danger','Invalid username or password'];
 
              }else{
                  $this->msg=['danger','Invalid username or password'];
                  exit;
              }
 
+        }else{
+            $this->msg=['danger','Invalid username or password'];
         }
     }
 
