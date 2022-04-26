@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(!$_SESSION['user']){
+  header('Location: login.php');
+}
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -42,7 +49,8 @@
                     <a class="nav-link" href="#">DEPARTMENTS</a>
                     <a class="nav-link" href="#">FAQs</a>
                     <a class="nav-link" href="#">REVIEWS</a>
-                    <a class="nav-link" href="#"><button class="btn" type="button" id="login-button">LOGIN</button></a>
+                 
+                    <a class="nav-link btn" href="logout.php" id="login-button">LOGOUT</a>
                     
                 </div>
             </div>

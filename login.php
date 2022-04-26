@@ -1,6 +1,10 @@
 <?php 
 require_once 'app/controller/userController.php';
 include_once 'view/layouts/navbar.php';
+if(isset($_SESSION['user'])){
+  header('Location: dashboard.php');
+}
+
 ?>
 
 <section class="container d-flex justify-content-center">
