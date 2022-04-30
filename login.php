@@ -1,7 +1,7 @@
 <?php 
 require_once 'app/controller/userController.php';
 include_once 'view/layouts/navbar.php';
-if(isset($_SESSION['user'])){
+if(isset($_SESSION['userid'])){
   header('Location: dashboard.php');
 }
 

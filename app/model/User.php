@@ -22,14 +22,15 @@ class User extends Database{
              if(mysqli_num_rows($stmt) > 0){
                 $result = mysqli_fetch_assoc($stmt);
                 if(Utils::passwordVerify($pass,$result['pass'])){ 
+                    $_SESSION['userid']=$result['index_num'];
                    return true;
                 }else{
                     $this->msg=['danger','Invalid username or password'];
-                    exit;
+                 
                 }
              }else{
                 $this->msg=['danger','Invalid username or password'];
-                exit;
+             
              }
 
         }else{

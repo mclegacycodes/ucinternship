@@ -169,3 +169,11 @@ footer a{
     padding: 8px 32px;
     width: 100%;
 }
+
+/* working on dashboard */
+#dashboard-body{
+background-color: #E8E8E8;
+}
+#main-container{
+    background-color: var(--white);
+}

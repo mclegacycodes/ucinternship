@@ -14,8 +14,9 @@ if(isset($_POST['loginbtn'])){
         $email= Utils::sanitize_email($_POST['email']);
         $pass = $_POST['pass'];
        if( $user->login($email,$pass)){
-           $_SESSION['user']=1;
-            header('Location: dashboard.php') ;
+        //    $_SESSION['user']=1;
+            // header('Location: dashboard.php') ;
+            return true;
         }else{
 
             if(!empty($user->msg)){
