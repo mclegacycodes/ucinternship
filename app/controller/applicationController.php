@@ -1,5 +1,5 @@
 <?php 
-session_start();
+// session_start();
 
 // fetch the tables from the db
-Application::fetchApplication($_SESSION['userid']);
+// Application::fetchApplication($_SESSION['userid']);

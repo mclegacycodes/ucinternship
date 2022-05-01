@@ -22,7 +22,7 @@ class User extends Database{
              if(mysqli_num_rows($stmt) > 0){
                 $result = mysqli_fetch_assoc($stmt);
                 if(Utils::passwordVerify($pass,$result['pass'])){ 
-                    $_SESSION['userid']=$result['index_num'];
+                    $_SESSION['userid']=$result;
                    return true;
                 }else{
                     $this->msg=['danger','Invalid username or password'];
@@ -35,6 +35,32 @@ class User extends Database{
 
         }else{
             $this->msg=['danger','Invalid username or password'];
+        }
+    }
+
+
+
+    // user application
+    public function checkApplication($user_id){
+          $stmt = $this->db->query("SELECT * FROM applications WHERE user_id ='{$user_id}'");
+        if(mysqli_num_rows($stmt)>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    public function fetchApplication($user_id){
+        if($this->checkApplication($user_id)){
+            $stmt = $this->db->query("SELECT * FROM applications WHERE user_id ='{$user_id}'");
+            //  $result = mysqli_fetch_assoc($stmt);
+            return $stmt;
+            
+
+        }else{
+            echo "no application";
+            
         }
     }
 

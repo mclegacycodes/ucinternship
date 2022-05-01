@@ -30,3 +30,6 @@ if(isset($_POST['loginbtn'])){
          }
     }
 }
+
+// fetch application
+$fetchResults = $user->fetchApplication($_SESSION['userid']['index_num']);

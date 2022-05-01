@@ -20,4 +20,11 @@ class Utils{
     public function setFlash($type, $msg){
         return "<div class='alert alert-{$type}'> $msg</div>";
     }
+
+    // generate application id
+    public function appId($userid){
+        $prefix ="AP";
+        $year = date('Y');
+        $num = substr(str_shuffle("01234567899876543210"),0,4);
+    }
 }

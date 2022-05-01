@@ -173,7 +173,12 @@ footer a{
 /* working on dashboard */
 #dashboard-body{
 background-color: #E8E8E8;
+overflow: hidden;
 }
 #main-container{
     background-color: var(--white);
+}
+
+#new-application{
+    background-color: var(--primary);
 }
