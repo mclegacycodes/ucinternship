@@ -42,8 +42,9 @@ class User extends Database{
 
     // user application
     public function checkApplication($user_id){
+        
           $stmt = $this->db->query("SELECT * FROM applications WHERE user_id ='{$user_id}'");
-        if(mysqli_num_rows($stmt)>0){
+        if(mysqli_num_rows($stmt) > 0){
             return true;
         }else{
             return false;
@@ -52,16 +53,26 @@ class User extends Database{
 
 
     public function fetchApplication($user_id){
+     
+        
         if($this->checkApplication($user_id)){
-            $stmt = $this->db->query("SELECT * FROM applications WHERE user_id ='{$user_id}'");
-            //  $result = mysqli_fetch_assoc($stmt);
+            $stmt = $this->db->query("SELECT t1.id, app_status, application_date, t2.name FROM applications AS t1
+            JOIN departments AS t2 ON t1.department_id = t2.id WHERE t1.user_id = 'psitc180059'");
             return $stmt;
             
 
         }else{
             echo "no application";
+          
             
         }
+    }
+
+
+    // get departments
+    public function getDepartment(){
+        $stmt =$this->db->query("SELECT * FROM departments");
+        return $stmt;
     }
 
 }
