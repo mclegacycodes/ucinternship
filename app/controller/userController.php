@@ -47,7 +47,8 @@ if(isset($_POST['appSubmit'])){
     // call insert function
     // if(!empty($dept_id)){
 
-    //     $user->insertApplication($app_id, $userId, $dept_id);
+        $user->insertApplication($app_id, $userId, $dept_id);
+        header("Refresh:5");
     // }else{
     //     echo "you didn't select an office";
     //     die();
