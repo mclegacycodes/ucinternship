@@ -82,13 +82,15 @@ class User extends Database{
 
        
         if($this->db->affected_rows > 0){
-            // $this->msg=['success','Your application has been submitted successfuly!'];
-            echo "success";
-            die();
+             $this->msg=['success','Your application has been submitted successfuly!'];
+            // echo "success";
+            // print_r($this->db->affected_rows);
+            // die();
         }else{
-            echo "failure";
-            die();
-            //  $this->msg=['danger','Insertion failed! Select an Office of Internship'];
+            // echo "failure";
+            // print_r($this->db->affected_rows);
+            // die();
+             $this->msg=['danger','Insertion failed! Select an Office of Internship'];
             //  print_r( $this->msg);
             //  die();
     
