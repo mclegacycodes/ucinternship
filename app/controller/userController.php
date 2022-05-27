@@ -14,8 +14,7 @@ if(isset($_POST['loginbtn'])){
         $email= Utils::sanitize_email($_POST['email']);
         $pass = $_POST['pass'];
        if( $user->login($email,$pass)){
-        //    $_SESSION['user']=1;
-            // header('Location: dashboard.php') ;
+
             return true;
         }else{
 
@@ -31,6 +30,29 @@ if(isset($_POST['loginbtn'])){
     }
 }
 
+
 // fetch application
 $fetchResults = $user->fetchApplication($_SESSION['userid']['index_num']);
 $getDept = $user->getDepartment();
+
+// when applicatin submit button is clicked
+if(isset($_POST['appSubmit'])){
+    if(!empty($_POST['department_id'])){
+    $app_id=Utils::setAppId(1);
+    $userId=$_SESSION['userid']['index_num'];
+    $dept_id= $_POST['department_id'];
+    // echo ($app_id." ".$userId." ".$dept_id);
+    
+
+    // call insert function
+    $user->insertApplication($app_id, $userId, $dept_id);
+    }else{
+        echo "please pick a motherfucking office";
+        die();
+    }
+   
+
+    // echo "application submitted";
+    // die();
+
+}

@@ -22,9 +22,11 @@ class Utils{
     }
 
     // generate application id
-    public function appId($userid){
+    public function setAppId($userid){
         $prefix ="AP";
         $year = date('Y');
         $num = substr(str_shuffle("01234567899876543210"),0,4);
+        $generate_id =$prefix.$userid.$year.$num;
+        return $generate_id;
     }
 }

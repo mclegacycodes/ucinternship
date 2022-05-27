@@ -85,7 +85,7 @@ if(!$_SESSION['userid']){
               }
               ?>
             <tr>
-              <td> <?php echo $row['id'] ?> </td>
+              <td> <?php echo $row['application_id'] ?> </td>
               <td> <span class="badge border rounded-pill p-2 <?php echo $color?>"><?php echo $msg?></span></td>
               <td> <?php echo $row['name'] ?> </td>
                <td> <?php echo $row['application_date'] ?> </td>
@@ -113,7 +113,7 @@ if(!$_SESSION['userid']){
       <div class="modal-header" style="border:none;">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body p-5">
+      <div class="modal-body p-4">
             <form action="" method="POST">
               <h2 style="font-size: 1.9 rem; color:#2E3192; font-weight:semibold; text-algin:center;">APPLICATION FORM</h2>
                
@@ -128,34 +128,35 @@ if(!$_SESSION['userid']){
                   <input type="text" class="form-control" name="email" value="<?php echo($_SESSION['userid']['email']);?>" disabled>
                 </div>
 
-                <div class="mb-3">
+                <!-- <div class="mb-3"> -->
                   <!-- appliation id -->
-                  <input type="text" class="form-control"  name="application_id" hidden>
-                </div>
+                  <!-- <input type="text" class="form-control"  name="application_id" hidden>
+                </div> -->
 
-                <div class="mb-3">
+                <!-- <div class="mb-3"> -->
                 <!-- appliation date -->
-                  <input type="text" class="form-control"  name="application_date" hidden>
-                </div>
+                  <!-- <input type="text" class="form-control"  name="application_date" hidden>
+                </div> -->
 
                 <div class="mb-3">
                   <label for="department_id" class="form-label">Office of Internship</label>
-                  <select name="department_id"  class="form-control">
-                    <option selected disabled>Select department</option>
+                  <select name="department_id"  class="form-control" required>
+                    <option selected disabled>-- Select department --</option>
                     <?php  while($dept = $getDept->fetch_assoc()){   ?>
                     <option value="<?php echo($dept["id"]) ?>"><?php echo($dept["name"]) ?></option>
                     <?php } ?>
                     <?php ?>
                   </select>
                 </div>
-            </form>
-
+           
       <!-- application form goes here -->
       </div>
-      <div class="modal-footer pb-5" style="border:none;">
+      <div class="modal-footer p-4" style="border:none;">
         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" style="background-color: var(--primary); color:var(--white)">Submit</button>
-      </div>
+        <button type="submit" name="appSubmit" class="btn btn-primary ms-3" style="background-color: var(--primary); color:var(--white); padding:8px 32px;">Submit</button>
+      </div> 
+    </form>
+
     </div>
   </div>
 </div>
