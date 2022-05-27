@@ -21,6 +21,15 @@ class Utils{
         return "<div class='alert alert-{$type}'> $msg</div>";
     }
 
+    // set dynamic alert
+    public function setAlert($type, $msg){
+        return "<div class='alert alert-{$type} alert-dismissible fade show position-absolute top-0 start-50 translate-middle-x' role='alert'>
+                $msg
+                <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
+                </div>";
+      
+    }
+
     // generate application id
     public function setAppId($userid){
         $prefix ="AP";

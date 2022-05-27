@@ -173,10 +173,11 @@ footer a{
 /* working on dashboard */
 #dashboard-body{
 background-color: #E8E8E8;
-overflow: hidden;
+/* overflow: hidden; */
 }
 #main-container{
     background-color: var(--white);
+    overflow-y:scroll;
 }
 
 #new-application{

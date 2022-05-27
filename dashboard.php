@@ -54,7 +54,12 @@ if(!$_SESSION['userid']){
        </nav>
    </header>
    <main class="col-8 mx-auto">
-     <div class="container rounded p-5 mx-auto vh-100 m-3" id="main-container">
+     <!-- Call error message or success message alert -->
+      <div class="position-relative w-100 mt-4">
+          <?php if(!empty($errorMessage)){echo $errorMessage; } ?> 
+
+      </div>
+     <div class="container rounded p-4 mx-auto vh-100 overflow-auto m-4" id="main-container">
       <h4 class="mb-5">Hi, <?php echo $_SESSION['userid']['fname'].' '.$_SESSION['userid']['lname'] ?>.</h4>
     
      
@@ -99,8 +104,10 @@ if(!$_SESSION['userid']){
 
 
       <!-- create application button -->
-       <a class="btn my-5 px-4 py-2" href="#" id="new-application" style="background-color: var(--primary); color:var(--white)" data-bs-toggle="modal" data-bs-target="#exampleModal">
-       New Application</a>
+       <a class="btn my-5 px-4 py-2 " href="#" id="new-application" 
+       style="background-color: var(--primary); color:var(--white)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       New Application
+      </a>
 
        <!-- create application form modal -->
      <!-- Button trigger modal -->
@@ -128,19 +135,9 @@ if(!$_SESSION['userid']){
                   <input type="text" class="form-control" name="email" value="<?php echo($_SESSION['userid']['email']);?>" disabled>
                 </div>
 
-                <!-- <div class="mb-3"> -->
-                  <!-- appliation id -->
-                  <!-- <input type="text" class="form-control"  name="application_id" hidden>
-                </div> -->
-
-                <!-- <div class="mb-3"> -->
-                <!-- appliation date -->
-                  <!-- <input type="text" class="form-control"  name="application_date" hidden>
-                </div> -->
-
                 <div class="mb-3">
                   <label for="department_id" class="form-label">Office of Internship</label>
-                  <select name="department_id"  class="form-control" required>
+                  <select name="department_id"  class="form-control" >
                     <option selected disabled>-- Select department --</option>
                     <?php  while($dept = $getDept->fetch_assoc()){   ?>
                     <option value="<?php echo($dept["id"]) ?>"><?php echo($dept["name"]) ?></option>
@@ -149,11 +146,12 @@ if(!$_SESSION['userid']){
                   </select>
                 </div>
            
-      <!-- application form goes here -->
+      <!-- submit button -->
       </div>
       <div class="modal-footer p-4" style="border:none;">
         <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-        <button type="submit" name="appSubmit" class="btn btn-primary ms-3" style="background-color: var(--primary); color:var(--white); padding:8px 32px;">Submit</button>
+        <button type="submit" name="appSubmit" class="btn btn-primary ms-3" 
+        style="background-color: var(--primary); color:var(--white); padding:8px 32px;">Submit</button>
       </div> 
     </form>
 
@@ -162,6 +160,7 @@ if(!$_SESSION['userid']){
 </div>
 
 <!-- end modal -->
+
 
 
 

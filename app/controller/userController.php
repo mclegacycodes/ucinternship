@@ -45,10 +45,24 @@ if(isset($_POST['appSubmit'])){
     
 
     // call insert function
-    $user->insertApplication($app_id, $userId, $dept_id);
+    if(!empty($dept_id)){
+
+        $user->insertApplication($app_id, $userId, $dept_id);
     }else{
-        echo "please pick a motherfucking office";
+        echo "you didn't select an office";
         die();
+    }
+    if(!empty($user->msg)){
+                $errorMessage = Utils::setAlert($user->msg[0],$user->msg[1]);
+            }
+    
+    }
+    else{
+        if(!empty($user->msg)){
+                $errorMessage = Utils::setAlert($user->msg[0],$user->msg[1]);
+                echo $errorMessage;
+                die();
+            }
     }
    
 
